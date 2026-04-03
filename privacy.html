@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー | タカケイナビ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-deep:   #2D6A4F;
+      --green-mid:    #52977A;
+      --green-light:  #B7DFC8;
+      --green-pale:   #F0F8F3;
+      --text-primary: #1A2E24;
+      --text-muted:   #556B60;
+      --border:       #D4EBD9;
+      --white:        #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--green-pale);
+      color: var(--text-primary);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* ヘッダー */
+    header {
+      background: var(--green-deep);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(45,106,79,0.3);
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--green-mid);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-mark svg { width: 20px; height: 20px; }
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.03em;
+    }
+    .logo-sub {
+      font-size: 11px;
+      color: var(--green-light);
+      margin-top: 1px;
+    }
+
+    /* ヒーロー */
+    .hero {
+      background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-mid) 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero-label {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--green-light);
+      background: rgba(255,255,255,0.1);
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: clamp(24px, 5vw, 34px);
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+    .hero-date {
+      font-size: 13px;
+      color: var(--green-light);
+    }
+
+    /* メイン */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* イントロ */
+    .intro-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 40px;
+      border-left: 4px solid var(--green-mid);
+    }
+    .intro-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* セクション */
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--green-deep);
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--green-deep);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1.5px solid var(--border);
+    }
+    .section-body {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+    .section-body p + p { margin-top: 12px; }
+
+    /* リスト */
+    .info-list {
+      list-style: none;
+      padding: 0;
+    }
+    .info-list li {
+      display: flex;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      align-items: flex-start;
+    }
+    .info-list li:last-child { border-bottom: none; }
+    .info-list .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green-mid);
+      border-radius: 50%;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    /* テーブル */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .info-table th {
+      background: var(--green-pale);
+      color: var(--green-deep);
+      font-weight: 700;
+      padding: 10px 14px;
+      text-align: left;
+      border: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .info-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.7;
+    }
+
+    /* 禁止バッジ */
+    .forbidden-list {
+      list-style: none;
+      padding: 0;
+    }
+    .forbidden-list li {
+      display: flex;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      align-items: flex-start;
+    }
+    .forbidden-list li:last-child { border-bottom: none; }
+    .x-mark {
+      width: 18px;
+      height: 18px;
+      background: #FEE2E2;
+      color: #B91C1C;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* お問い合わせ */
+    .contact-card {
+      background: var(--green-deep);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      color: white;
+      margin-top: 48px;
+    }
+    .contact-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .contact-card p {
+      font-size: 13px;
+      color: var(--green-light);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .contact-card a {
+      display: inline-block;
+      background: #06C755;
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 99px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    /* フッター */
+    footer {
+      background: var(--text-primary);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    footer p {
+      font-size: 12px;
+      color: var(--green-light);
+      opacity: 0.7;
+    }
+    footer a {
+      color: var(--green-light);
+      text-decoration: none;
+    }
+
+    /* モバイル対応 */
+    @media (max-width: 600px) {
+      .hero { padding: 40px 20px 36px; }
+      main { padding: 32px 16px 60px; }
+      .intro-card { padding: 20px; }
+      .section-body { padding: 18px 20px; }
+      .contact-card { padding: 24px 20px; }
+      .info-table th, .info-table td { padding: 8px 10px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"/>
+        <line x1="12" y1="4" x2="12" y2="20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="4" y1="12" x2="20" y2="12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <polygon points="12,5 10,9 12,8 14,9" fill="white"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-text">タカケイナビ</div>
+      <div class="logo-sub">高崎経済大学 公式ポータルサイト</div>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-label">PRIVACY POLICY</div>
+  <h1>プライバシーポリシー</h1>
+  <p class="hero-date">制定日：2026年4月4日　　最終更新：2026年4月4日</p>
+</div>
+
+<main>
+
+  <div class="intro-card">
+    <p>タカケイナビ（以下「本サービス」）は、高崎経済大学の新入生を対象とした情報提供サービスです。本サービスのLINE公式アカウント「タカケイナビ」をご利用いただくにあたり、ユーザーの個人情報の取り扱いについて以下のとおり定めます。本ポリシーに同意いただいたうえでご利用ください。</p>
+  </div>
+
+  <!-- 1. 取得する情報 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="section-num">1</span>取得する情報
+    </div>
+    <div class="section-body">
+      <ul class="info-list">
+        <li><span class="dot"></span>LINE UID（LINEが発行する内部識別子。氏名・電話番号とは異なります）</li>
+        <li><span class="dot"></span>タカケイナビLINEへの友だち追加日時</li>
+        <li><span class="dot"></span>タカケイナビLINEとのチャット内容（送受信したメッセージのテキスト）</li>
+        <li><span class="dot"></span>LINEプロフィールに設定された表示名</li>
+      </ul>
+      <p style="margin-top:16px; font-size:13px; color:#6B7280;">※ 氏名・住所・電話番号・学籍番号・メールアドレスなどの個人を直接特定できる情報は収集しておりません。チャット中にこれらの情報を入力しないようお願いします。</p>
+    </div>
+  </div>
+
+  <!-- 2. 利用目的 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="section-num">2</span>利用目的
+    </div>
+    <div class="section-body">
+      <ul class="info-list">
+        <li><span class="dot"></span>AIアシスタント「タカちゃん」によるサークル・バイト・大学生活に関する情報提供</li>
+        <li><span class="dot"></span>メッセージ会話の文脈を保持し、継続的な対話を実現するため</li>
+        <li><span class="dot"></span>本サービスの品質改善・不具合対応のため</li>
+        <li><span class="dot"></span>高崎経済大学に関するお知らせ・イベント情報の配信のため</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3. 第三者提供 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="section-num">3</span>第三者への提供
+    </div>
+    <div class="section-body">
+      <p>取得した情報は、以下の場合を除き、第三者へ提供・販売・共有しません。</p>
+      <table class="info-table" style="margin-top:16px;">
+        <thead>
+          <tr>
+            <th>提供先</th>
+            <th>提供する情報</th>
+            <th>目的</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LINEヤフー株式会社</td>
+            <td>LINE UIDおよびチャット内容</td>
+            <td>LINEプラットフォームの運用上、必然的に経由</td>
+          </tr>
+          <tr>
+            <td>Groq, Inc.（米国）</td>
+            <td>チャット内容（テキスト）</td>
+            <td>AIによる応答生成。個人を特定しない形で処理</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px; font-size:13px; color:#6B7280;">※ Groq APIはAI応答の生成のみに使用され、取得したデータをトレーニングに使用しないポリシーを定めています。</p>
+    </div>
+  </div>
+
+  <!-- 4. 情報の保管・管理 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="section-num">4</span>情報の保管・管理
+    </div>
+    <div class="section-body">
+      <ul class="info-list">
+        <li><span class="dot"></span>チャット履歴はRender.com（米国）のサーバー上にてセキュアに管理されます</li>
+        <li><span class="dot"></span>会話履歴は直近8往復（16メッセージ）のみを一時的にメモリ上で保持し、サーバー再起動時に自動的に消去されます</li>
+        <li><span class="dot"></span>管理者はLINE公式アカウントの二段階認証を設定し、不正アクセスを防止します</li>
+        <li><span class="dot"></span>本サービスの運営スタッフ以外は情報にアクセスできません</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5. 禁止事項 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="section-num">5</span>収集しない・求めない情報
+    </div>
+    <div class="section-body">
+      <p style="margin-bottom:14px;">本サービスでは以下の情報を収集・要求することは一切ありません。</p>
+      <ul class="forbidden-list">
+        <li><span class="x-mark">✕</span>氏名・住所・電話番号・メールアドレス</li>
+        <li><span class="x-mark">✕</span>学籍番号・学生証番号</li>
+        <li><span class="x-mark">✕</span>クレジットカード情報・銀行口座情報</li>
+        <li><span class="x-mark">✕</span>マイナンバー・パスポート番号等の公的識別情報</li>
+        <li><span class="x-mark">✕</span>健康・医療に関する情報</li>
+      </ul>
+      <p style="margin-top:14px; font-size:13px; color:#6B7280;">※ 万が一タカちゃんがこれらの情報を求めるような動作をした場合は、入力せずに本ページ末尾の問い合わせ先までご連絡ください。</p>
+    </div>
+  </div>
+
+  <!-- 6. ユーザーの権利 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="section-num">6</span>ユーザーの権利
+    </div>
+    <div class="section-body">
+      <ul class="info-list">
+        <li><span class="dot"></span>本サービスをブロック・友だち削除することで、いつでもサービスの利用を停止できます</li>
+        <li><span class="dot"></span>保有する情報の開示・訂正・削除を希望する場合は、下記お問い合わせ先までご連絡ください</li>
+        <li><span class="dot"></span>個人情報の利用停止を求める権利を有します</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 7. ポリシーの変更 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="section-num">7</span>プライバシーポリシーの変更
+    </div>
+    <div class="section-body">
+      <p>本ポリシーは、法令の改正やサービス内容の変更に応じて改定される場合があります。重要な変更がある場合は、LINEアカウントのメッセージまたはタカケイナビサイト上でお知らせします。変更後も本サービスをご利用いただいた場合、改定後のポリシーに同意いただいたものとみなします。</p>
+    </div>
+  </div>
+
+  <!-- お問い合わせ -->
+  <div class="contact-card">
+    <h3>🐻 お問い合わせ</h3>
+    <p>本ポリシーに関するご質問・個人情報の開示・削除のご要望は、<br>タカケイナビLINEのチャットにてお申し付けください。</p>
+    <a href="https://line.me/R/ti/p/@596tjfsj" target="_blank">LINEで問い合わせる</a>
+  </div>
+
+</main>
+
+<footer>
+  <p style="margin-bottom:6px;">
+    <a href="https://dosgozi-beep.github.io/takakey-navi/">タカケイナビ トップへ戻る</a>
+  </p>
+  <p>© 2026 タカケイナビ. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
